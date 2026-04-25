@@ -158,6 +158,7 @@ Example:
 
 ```bash
 Update-Database -Context ApplicationDbContext
+Update-Database -Context IdentityContext
 ```
 
 ---
@@ -169,6 +170,29 @@ Update-Database -Context ApplicationDbContext
 ```
 http://localhost:50771/swagger/index.html
 ```
+
+## Test Credentials (Seeded Users)
+
+The system comes with pre-seeded users for testing purposes.
+**Basic Users**
+
+You can use the following accounts to test authentication and order flow:
+
+Email	Password	Role
+basicuser1@gmail.com
+	123Pa$$word!	User
+basicuser2@gmail.com
+	123Pa$$word!	User
+basicuser3@gmail.com
+	123Pa$$word!	User
+
+Usage Notes
+All users are pre-confirmed (EmailConfirmed = true)
+
+The password is the same for all seeded users for simplicity:
+
+123Pa$$word!
+These users are intended for testing only
 
 ## Key Engineering Decisions
 
@@ -219,3 +243,4 @@ This project demonstrates:
 * Clean Architecture design
 * Event-driven patterns
 * Production-level thinking
+
