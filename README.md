@@ -11,7 +11,8 @@ It demonstrates how to design and implement a **production-ready e-commerce orde
 * Inventory management
 * Event-driven architecture (in-process)
 * Clean and maintainable code structure
- 🏗️ Architecture
+  
+## Architecture
 
 The system follows **Clean Architecture principles**:
 
@@ -34,7 +35,7 @@ Infrastructure (Persistence & External Services)
     - Repositories
     - Seeding
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 * ASP.NET Core Web API (.NET 8/9)
 * Entity Framework Core
@@ -46,7 +47,7 @@ Infrastructure (Persistence & External Services)
 * TransactionScope (atomic operations)
 
 
-## 🚀 Features
+## Features
 
 ### 🛒 Order Processing
 
@@ -58,7 +59,7 @@ Infrastructure (Persistence & External Services)
 
 ---
 
-### 📦 Inventory Management
+### Inventory Management
 
 * Prevents overselling
 * Stock validation during:
@@ -71,7 +72,7 @@ Infrastructure (Persistence & External Services)
 
 ---
 
-### 🔄 Order Lifecycle
+### Order Lifecycle
 
 * Create Order
 * Update Order
@@ -80,7 +81,7 @@ Infrastructure (Persistence & External Services)
 
 ---
 
-### 📡 Event-Driven Flow (In-Process Pub/Sub)
+### Event-Driven Flow (In-Process Pub/Sub)
 
 After successful order placement:
 
