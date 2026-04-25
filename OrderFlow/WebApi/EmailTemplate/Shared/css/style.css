@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  line-height: unset;
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Roboto", Segoe UI, Open Sans, sans-serif;
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  padding: 6.5rem 0;
+}
+
+main {
+  background-color: #e5e5e5;
+  padding: 13.6rem 16.3rem;
+}
+main > div > p {
+  font-size: 1.8rem;
+}
+main > div {
+  margin-bottom: 3rem;
+}
+main .body a {
+  color: white;
+  text-decoration: none;
+  background-color: #ff5500;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 1.2rem 1.8rem;
+  margin: 3.4rem 0;
+  display: block;
+  width: fit-content;
+  font-weight: bold;
+}
+main .conclusion p:first-of-type {
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #222753;
+}
+footer > div > p {
+  font-size: 1.6rem;
+}
+footer .address {
+  width: 100%;
+  max-width: 26rem;
+  margin-bottom: 4rem;
+}
+footer .address p {
+  text-align: center;
+}
+footer .address p:nth-child(2) {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+footer .social_media a:not(:last-child) {
+  margin-right: 6.6rem;
+}
+
+@media only screen and (max-width: 576px) {
+  main {
+    padding: 13.6rem 8rem;
+  }
+}

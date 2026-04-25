@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.AccountController.AuthenticateAsync(Application.DTOs.Account.AuthenticationRequest)">
+            <summary>
+            Endpoint use to login
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.RegisterAsync(Application.DTOs.Account.RegisterRequest)">
+            <summary>
+            Used to create/register a user
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.Verify(Application.DTOs.Account.OtpRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.ForgotPassword(Application.DTOs.Account.ForgotPasswordRequest)">
+            <summary>
+            Forgot password endpoint
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.ResetPassword(Application.DTOs.Account.ResetPasswordRequest)">
+            <summary>
+            reset password endpoint
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.ChangePassword(Application.DTOs.Account.ChangePasswordRequest)">
+            <summary>
+            change password endpoint
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.RefreshToken(System.String)">
+            <summary>
+            Refresh token endpoint
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.AccountController.CreateAdminAsync(Application.DTOs.Account.RegisterRequest)">
+            <summary>
+            used to create an admin
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.CartItemController.GetMenuItemComments">
+            <summary>
+            Used to get user cart item list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.CartItemController.AddOrUpdateCartItem(Application.Features.Cart.Command.AddOrUpdateCartItemCommand)">
+            <summary>
+            Used to add or update user cart
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.CartItemController.RemoveCartItem(System.Int32)">
+            <summary>
+            Used to remove an item from a cart
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.CommentController.GetCommentsById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.CommentController.GetMenuItemComments(System.Int32)">
+            <summary>
+            Get a menu item comment(s)
+            </summary>
+            <param name="menuItemId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.CommentController.AddOrUpdateComments(Application.Features.Comment.Command.AddOrUpdateCommentCommand)">
+            <summary>
+            Add or update comments
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.CommentController.GetUserComments(System.Int32,System.Int32)">
+            <summary>
+            Get user comment(s)
+            </summary>
+            <param name="userId"></param>
+            <param name="menuItemId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.OrderController.GetUserOrders(System.Int32)">
+            <summary>
+            Used to get user orders
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.OrderController.GetOrderById(System.Int32)">
+            <summary>
+            Get a single order detail
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.OrderController.GetAllOrders">
+            <summary>
+            get all order(s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.OrderController.AddOrUpdateOrder(Application.Features.Order.Command.AddOrUpdateOrderCommand)">
+            <summary>
+            Add or update user order
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.OrderController.CancelOrder(Application.Features.Order.Command.CancelOrderCommand)">
+            <summary>
+            Cancel User Order
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.v1.OrderController.DeleteOrder(System.Int32)">
+            <summary>
+            Delete an order
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Services.ConfigureSwaggerOptions.#ctor(Asp.Versioning.ApiExplorer.IApiVersionDescriptionProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WebApi.Services.ConfigureSwaggerOptions"/> class.
+            </summary>
+            <param name="provider">The <see cref="T:Asp.Versioning.ApiExplorer.IApiVersionDescriptionProvider">provider</see> used to generate Swagger documents.</param>
+        </member>
+        <member name="M:WebApi.Services.ConfigureSwaggerOptions.Configure(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApi.Services.SwaggerDefaultValues.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the filter to the specified operation using the given context.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+    </members>
+</doc>

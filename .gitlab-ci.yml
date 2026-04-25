@@ -1,0 +1,36 @@
+before_script:
+  - apt-get update -qq
+  - apt-get install -qq git
+  # Setup SSH deploy keys
+  - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+deploy_staging:
+  stage: deploy
+  environment:
+    name: stage
+  script:
+    - ssh lawpavilion@20.39.208.10 "cd /inetpub/wwwroot/stagings/lppc-api && git pull origin stage && %SYSTEMROOT%\System32\inetsrv\appcmd recycle apppool /apppool.name:"DefaultAppPool" && dotnet publish -c Release -o build"
+  only:
+    - stage
+
+deploy_qa:
+  stage: deploy
+  environment:
+    name: qa
+  script:
+    - ssh lawpavilion@20.39.208.10 "cd /inetpub/wwwroot/Qa/lppc-api && git pull origin qa && %SYSTEMROOT%\System32\inetsrv\appcmd recycle apppool /apppool.name:"api.lppc-qa.lawpavilion.com" && dotnet publish -c Release -o build"
+  only:
+    - qa
+
+deploy_production:
+  stage: deploy
+  environment:
+    name: production
+  script:
+    - ssh lawpavilion@20.39.208.10 "cd /inetpub/wwwroot/live_stagings/lppc-api && git pull origin master && %SYSTEMROOT%\System32\inetsrv\appcmd recycle apppool /apppool.name:"DefaultAppPool" && dotnet publish -c Release -o build"
+  only:
+    - /^v.*$/

@@ -1,0 +1,140 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Court Manager</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+        line-height: unset;
+        outline: none;
+      }
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "Roboto", Segoe UI, Open Sans, sans-serif;
+        max-width: 96rem;
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: white;
+        padding: 6.5rem 0;
+      }
+
+      main {
+        background-color: #e5e5e5;
+        padding: 13.6rem 16.3rem;
+      }
+      main > div > p {
+        font-size: 1.8rem;
+      }
+      main > div {
+        margin-bottom: 3rem;
+      }
+      main .body a {
+        color: white;
+        text-decoration: none;
+        background-color: #ff5500;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        padding: 1.2rem 1.8rem;
+        margin: 3.4rem 0;
+        display: block;
+        width: fit-content;
+        font-weight: bold;
+      }
+      main .conclusion p:first-of-type {
+        margin-bottom: 1.5rem;
+      }
+
+      footer {
+        padding: 8rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: #222753;
+      }
+      footer > div > p {
+        font-size: 1.6rem;
+      }
+      footer .address {
+        width: 100%;
+        max-width: 26rem;
+        margin-bottom: 4rem;
+      }
+      footer .address p {
+        text-align: center;
+      }
+      footer .address p:nth-child(2) {
+        margin-top: 2rem;
+        font-weight: bold;
+      }
+      footer .social_media a:not(:last-child) {
+        margin-right: 6.6rem;
+      }
+
+      @@media only screen and (max-width: 576px) {
+        main {
+          padding: 13.6rem 8rem;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imgs/logo.png" alt="law pavilion logo" />
+    </header>
+
+    <main>
+        <div class="greeting">
+            <p>Hello Jorbari,</p>
+        </div>
+        <div class="body">
+            <p>
+                Congratulations, You have been invited to join Court Manager by Ikare
+                Judicial Division in true honesty of the Court. You are required to
+                login in your account by the button below
+            </p>
+            <a href=""> ACTIVATE MY ACCOUNT </a>
+            <p>Take a seat back and enjoy the ride with us</p>
+        </div>
+        <div class="conclusion">
+            <p>Love,</p>
+            <p>LawPavilion Team.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="address">
+            <p>20, Felicia Koleosho Street, Off Agbaoku Street, Opebi, Lagos.</p>
+            <p>customercare@lawpavilion.com</p>
+        </div>
+        <div class="social_media">
+            <a href="https://www.facebook.com/LawPavilion/">
+                <img src="imgs/facebook.png" alt="facebook logo" />
+            </a>
+            <a href="https://twitter.com/lawpavilion"><img src="imgs/twitter.png" alt="twitter logo" /></a><a href="https://www.linkedin.com/company/lawpavilion/"><img src="imgs/linkedin.png" alt="linkedin logo" /></a><a href="https://www.instagram.com/lawpavilion/">
+                <img src="imgs/instagram.png" alt="instagram logo" />
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

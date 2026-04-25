@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>OrderFlow.WebAPI.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>OrderFlow.WebAPI.xml</DocumentationFile>
+	</PropertyGroup>
+
+  <ItemGroup>
+	  <Content Remove="EmailTemplate\ConfirmEmail.cshtml" />
+	  <Content Remove="EmailTemplate\ResetPassword.cshtml" />
+	  <Content Remove="EmailTemplate\Template.cshtml" />
+	  <Content Remove="EmailTemplate\UserInvitation.cshtml" />
+	  <Compile Remove="FileUpload\**" />
+	  <Content Remove="EmailTemplate\Shared\**" />
+	  <Content Remove="FileUpload\**" />
+	  <EmbeddedResource Remove="FileUpload\**" />
+	  <None Remove="FileUpload\**" />
+  </ItemGroup>
+	<PropertyGroup>
+		<CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Include="EmailTemplate\ConfirmEmail.cshtml">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Include="EmailTemplate\ResetPassword.cshtml">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Include="EmailTemplate\Template.cshtml">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Include="EmailTemplate\Shared\**">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+    <Content Include="FileUpload\**">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.1" />
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.12" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\v1\BPRBranchDueController.cs~RF1f3e38fb.TMP" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <None Include="EmailTemplate\Shared\Restest.cshtml" />
+    <None Include="EmailTemplate\Shared\_layout.cshtml" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+	 <Folder Include="FileUpload\" />
+	 <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure.Identity\Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\Infrastructure.Shared\Infrastructure.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

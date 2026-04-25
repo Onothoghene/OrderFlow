@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "/EmailTemplate/Shared/_layout.cshtml";
+}
+
+<tr>
+    <td align="center" valign="top" style="background-color:#e5e5e5; padding-left:20px;padding-right:20px;"
+        class="containtTable ui-sortable">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+               class="tableTitleDescription">
+            <tbody>
+                <tr>
+                    <td align="center" valign="top" style="padding-bottom:10px;" class="mediumTitle">
+                        <p class="text"
+                           style="color:#FF0000; font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:14px; font-weight:400; font-style:normal; letter-spacing:normal; line-height:26px; text-transform:none; text-align:left; padding:0; margin-bottom: 1rem">
+                            APPLICATION FAILURE ALERT!!!
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" valign="top" style="padding-bottom:20px;" class="description">
+                        <p class="text"
+                           style="color:#666666; font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:14px; font-weight:400; font-style:normal; letter-spacing:normal; line-height:22px; text-transform:none; text-align:left; padding:0; margin:0">
+                            Please be notified that LPPC application failed in an attempt to login from the background job. Kindly see details below and act fast.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" valign="top" style="padding-bottom:20px;" class="description">
+                        <p class="text"
+                           style="color:#666666; font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:14px; font-weight:400; font-style:normal; letter-spacing:normal; line-height:22px; text-transform:none; text-align:left; padding:0; margin:0">
+                            @Model.Body
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" valign="top" style="padding-bottom:20px;" class="description">
+                        <p class="text"
+                           style="color:#666666; font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:14px; font-weight:400; font-style:normal; letter-spacing:normal; line-height:22px; text-transform:none; text-align:left; padding:0; margin:0">
+                            Regards,
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+               class="tableTitleDescription">
+            <tbody>
+
+                <tr>
+                    <td align="center" valign="top" style="padding-bottom:20px;" class="description">
+
+                        <p class="text"
+                           style="color:#666666; font-family:'Open Sans', Helvetica, Arial, sans-serif; font-size:14px; font-weight:400; font-style:normal; letter-spacing:normal; line-height:22px; text-transform:none; text-align:left; padding:0; margin:0">
+                            Powered by <br>
+                            LPPC Onlline
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </td>
+</tr>
